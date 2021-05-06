@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:demo_appentus/Authentication_Screen/Login.dart';
 import 'package:demo_appentus/Home/SecondScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -84,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                             await SharedPreferences.getInstance();
                         sp.remove("name");
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => MyPage()));
+                            MaterialPageRoute(builder: (context) => Login()));
                       }),
                 ])
               ],
