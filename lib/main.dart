@@ -1,8 +1,13 @@
 import 'package:demo_appentus/Authentication_Screen/Register.dart';
+import 'package:demo_appentus/Home/HomePage.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences preferences = await SharedPreferences.getInstance();
+  var _name = preferences.getString('name');
+  runApp(_name == null ? MyApp() : MainScreen());
 }
 
 class MyApp extends StatelessWidget {

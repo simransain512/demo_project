@@ -1,3 +1,4 @@
+import 'package:demo_appentus/Authentication_Screen/Login.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
@@ -75,7 +76,9 @@ class _RegisterState extends State<Register> {
               color: Colors.deepOrange,
               height: 40.0,
               minWidth: 250.0,
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+              },
               child: Text(
                 "Register", style: TextStyle(
                 color: Colors.white,
@@ -83,7 +86,23 @@ class _RegisterState extends State<Register> {
               ),
               ),
             ),
-          )
+          ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Row(
+                  children: [
+                    Text("Already have a account ? "),
+                    InkWell(child: Text("Login"),
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Login())),
+                    ),
+                  ],
+                ),
+              ),
+            )
+
           ],
         ),
       ),
