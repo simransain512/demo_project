@@ -90,16 +90,18 @@ class _RegisterState extends State<Register> {
 
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: Row(
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Already have a account ? "),
-                    InkWell(child: Text("Login"),
+                    InkWell(child: Text("Login",
+                      style: TextStyle(color: Colors.deepOrange,
+                          fontSize: 16.0,
+                      fontWeight: FontWeight.bold),),
                       onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Login())),
                     ),
                   ],
-                ),
+
               ),
             )
 

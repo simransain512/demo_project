@@ -5,6 +5,8 @@ A new Flutter application.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
+- This Project will tell how to store data on local database in flutter using SharedPreferences.
+- You will learn to get data from api using http request.
 
 A few resources to get you started if this is your first Flutter project:
 

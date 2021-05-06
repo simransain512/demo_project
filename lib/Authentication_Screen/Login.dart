@@ -92,16 +92,19 @@ class _LoginState extends State<Login> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Align(
-                alignment: Alignment.bottomCenter,
+
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Don't have a account ? "),
-                    InkWell(child: Text("Register now", style: TextStyle(fontSize: 18.0),),
+                    InkWell(
+                      child: Text("Register Now",
+                      style: TextStyle(fontSize: 16.0, color: Colors.deepOrange,
+                          fontWeight: FontWeight.bold),),
                       onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Register())),
                     ),
                   ],
-                ),
+
               ),
             )
           ],
